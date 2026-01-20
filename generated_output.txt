@@ -1,0 +1,35 @@
+LSTM TEXT GENERATOR - OUTPUT SAMPLES
+======================================================================
+
+Seed: 'to be or not to be'
+----------------------------------------------------------------------
+to be or not to be then wonful show
+that that your place tears worth so slow desert
+the plainter and my deaths world
+make sing this so formourge thy would not so some and age recose
+yet i day is my love of your from th
+
+======================================================================
+
+Seed: 'romeo romeo wherefore'
+----------------------------------------------------------------------
+romeo romeo wherefore blony is my seements
+when i death proves their mortaw
+but thou art best show and beauty stay
+why hould weels seeming this my self gure
+to bled works from the folst so fair thought in thee hath days
+ 
+
+======================================================================
+
+Seed: 'shall i compare thee'
+----------------------------------------------------------------------
+shall i compare thee for the sweet still
+mine or this mind oerthing say
+  happard of may a speasin of my for lend
+for his still suvise despiced such thee
+it the proudons the walling butters to confound
+minuse one your re
+
+======================================================================
+
