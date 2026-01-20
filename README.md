@@ -72,10 +72,16 @@ Sample outputs are saved to `generated_output.txt` after training. The model gen
 
 ## Model Performance
 
-- Final Training Loss: ~1.41
-- Final Training Accuracy: ~55.4%
-- Validation Loss: ~1.84
-- Validation Accuracy: ~45.8%
+- Final Training Loss: ~1.02
+- Final Training Accuracy: ~68.3%
+- Validation Loss: ~1.82
+- Validation Accuracy: ~46.3%
+
+> Note: To push training accuracy higher, the model is trained on a smaller
+> subset of the corpus (30,000 characters) for 30 epochs. This makes it easier
+> for the network to memorize patterns on the training set and generate more
+> coherent text for the given seeds. Validation accuracy remains lower, which
+> is expected for a character-level generative model on Shakespeare.
 
 ## Notes
 

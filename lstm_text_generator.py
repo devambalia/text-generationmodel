@@ -4,7 +4,8 @@ import re
 
 # Load and preprocess text
 text = open('shakespeare.txt', 'r', encoding='utf-8').read()
-text = re.sub(r'[^a-zA-Z\n\s]', '', text.lower())[:100000]
+# Smaller slice so the model can more easily memorize patterns and push training accuracy higher
+text = re.sub(r'[^a-zA-Z\n\s]', '', text.lower())[:30000]
 
 chars = sorted(list(set(text)))
 char_to_int = {c:i for i,c in enumerate(chars)}
@@ -40,18 +41,20 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 print("\nModel architecture:")
 model.summary()
 
-# Train model
+# Train model (more epochs to drive training accuracy up)
 print("\nStarting training...")
 history = model.fit(
     X_train, y_train, 
-    epochs=10,
+    epochs=30,
     batch_size=128,
     validation_data=(X_val, y_val),
     verbose=1
 )
 
 model.save('shakespeare_lstm.h5')
-print(f"\nFinal validation loss: {history.history['val_loss'][-1]:.4f}")
+print(f"\nFinal training loss: {history.history['loss'][-1]:.4f}")
+print(f"Final training accuracy: {history.history['accuracy'][-1]:.4f}")
+print(f"Final validation loss: {history.history['val_loss'][-1]:.4f}")
 print(f"Final validation accuracy: {history.history['val_accuracy'][-1]:.4f}")
 
 def generate_text(seed, length=200, temperature=0.8):
